@@ -1,0 +1,14 @@
+#!/bin/bash
+
+username=$1
+passwd=$2
+key=$3
+
+echo ${username}
+echo ${passwd}
+echo ${key}
+
+grep -ri "${key}" ./txt
+if [ $? -eq 1 ]; then
+    exit 2
+fi
